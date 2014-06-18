@@ -7,7 +7,7 @@
 //
 
 #import "CDVCertificate.h"
-#import <Cordova/CDVPlugin.h>
+#import <Cordova/CDV.h>
 #import "NSURLRequest+AllowUntrustedCertificates.h"
 
 @implementation CDVCertificate

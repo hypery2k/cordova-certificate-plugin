@@ -50,6 +50,8 @@ SOFTWARE.
 		<header-file src="src/ios/CDVCertificate.h" />
 		<source-file src="src/ios/CDVCertificate.m" />
 
+		<header-file src="src/ios/NSURLRequest+AllowUntrustedCertificates.h" />
+		<source-file src="src/ios/NSURLRequest+AllowUntrustedCertificates.m" />
     </platform>
 
 </plugin>

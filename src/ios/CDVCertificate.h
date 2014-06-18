@@ -6,7 +6,7 @@
 //
 //
 
-#import "CDVInvokedUrlCommand.h"
+#import <Cordova/CDVPlugin.h>
 
 @interface CDVCertificate : CDVPlugin
 
