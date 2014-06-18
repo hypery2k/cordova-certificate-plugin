@@ -47,8 +47,8 @@ SOFTWARE.
         <clobbers target="cordova.plugins.certificates" />
         </js-module>
 
-		<header-file src="src/ios/CDVCertificate" />
-		<source-file src="src/ios/CDVCertificate" />
+		<header-file src="src/ios/CDVCertificate.h" />
+		<source-file src="src/ios/CDVCertificate.m" />
 
     </platform>
 
