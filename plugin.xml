@@ -27,7 +27,7 @@ SOFTWARE.
            id="org.apache.cordova.certificates"
       version="0.1.0">
 
-    <name>Console</name>
+    <name>CDVCertificate</name>
     <description>Cordova Certificate Plugin</description>
     <license>MIT</license>
     <keywords>cordova,console</keywords>
