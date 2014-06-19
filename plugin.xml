@@ -34,24 +34,39 @@ SOFTWARE.
     <repo>https://github.com/hypery2k/cordova-certificate-plugin.git</repo>
     <issue>https://github.com/hypery2k/cordova-certificate-plugin/issues</issue>
 
+
+
+    <js-module src="www/certificate.js" name="Certificates">
+        <clobbers target="cordova.plugins.certificates" />
+    </js-module>
+
     <!-- ios -->
     <platform name="ios">
 
         <config-file target="config.xml" parent="/*">
-		<feature name="CDVCertificate">
-			<param name="ios-package" value="CDVCertificate"/>
-		</feature>
+    		<feature name="CDVCertificate">
+    			<param name="ios-package" value="CDVCertificate"/>
+    		</feature>
         </config-file>
-
-        <js-module src="www/certificate.js" name="Certificates">
-        <clobbers target="cordova.plugins.certificates" />
-        </js-module>
 
 		<header-file src="src/ios/CDVCertificate.h" />
 		<source-file src="src/ios/CDVCertificate.m" />
 
 		<header-file src="src/ios/NSURLRequest+AllowUntrustedCertificates.h" />
 		<source-file src="src/ios/NSURLRequest+AllowUntrustedCertificates.m" />
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">            
+            <feature name="CertificatesPlugin" >
+                <param name="android-package" value="de.martinreinhardt.cordova.plugins.CertificatesPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/de/martinreinhardt/cordova/plugins/CertificatesPlugin.java" target-dir="src/org/apache/cordova/device" />
+
     </platform>
 
 </plugin>
