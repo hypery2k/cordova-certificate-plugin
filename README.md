@@ -19,5 +19,5 @@ cordova.plugins.certificates.trustUnsecureCerts(true)
 
 Dectivate insecure certificates
 ```
-cordova.plugins.certificates.trustUnsecureCerts(true)
+cordova.plugins.certificates.trustUnsecureCerts(false)
 ```
