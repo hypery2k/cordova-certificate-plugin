@@ -1,6 +1,6 @@
 # Certificate Plugin for Apache Cordova
 
-# Introduction
+## Introduction
 Cordova Plugin to configure SSL Certificates, currently used to enable usage of untrusted  aka self-signed SSL certifcates
 
 
