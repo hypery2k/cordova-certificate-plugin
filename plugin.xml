@@ -38,7 +38,7 @@ SOFTWARE.
     <platform name="ios">
 
         <config-file target="config.xml" parent="/*">
-		<feature name="Console">
+		<feature name="CDVCertificate">
 			<param name="ios-package" value="CDVCertificate"/>
 		</feature>
         </config-file>
