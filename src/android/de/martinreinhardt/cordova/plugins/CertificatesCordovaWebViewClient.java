@@ -1,9 +1,11 @@
 package de.martinreinhardt.cordova.plugins;
 
 
+import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CordovaWebViewClient;
 
+import android.util.Log;
 import android.net.http.SslError;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
@@ -17,6 +19,8 @@ import android.webkit.WebView;
  *
  */
 public class CertificatesCordovaWebViewClient extends CordovaWebViewClient {
+
+    public static final String TAG = "CertificatesCordovaWebViewClient";
 
     private boolean allowUntrusted = false;
 
@@ -34,7 +38,7 @@ public class CertificatesCordovaWebViewClient extends CordovaWebViewClient {
 
     @Override
     public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
-        Log.d("onReceivedSslError. Proceed? " + isAllowUntrusted());
+        Log.d(TAG, "onReceivedSslError. Proceed? " + isAllowUntrusted());
         if (isAllowUntrusted()) {
             handler.proceed();
         } else {
