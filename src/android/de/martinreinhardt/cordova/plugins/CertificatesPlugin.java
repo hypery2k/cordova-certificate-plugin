@@ -3,8 +3,7 @@ package de.martinreinhardt.cordova.plugins;
 
 import android.util.Log;
 import org.apache.cordova.*;
-import org.json.JSONException;
-
+import org.json.*;
 import android.content.Context;
 
 /**
@@ -32,6 +31,7 @@ public class CertificatesPlugin extends CordovaPlugin {
      * @param callbackContext The callback context used when calling back into JavaScript.
      * @return                Whether the action was valid.
      *
+     *
      */
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -39,9 +39,9 @@ public class CertificatesPlugin extends CordovaPlugin {
             boolean allowUntrusted = args.getBoolean(0);
             Log.d(LOG_TAG, "Setting allowUntrusted to " + allowUntrusted);
             CordovaActivity ca = (CordovaActivity) this.cordova.getActivity();
-            webView.clearSslPreferences();
-            webView.clearCache(true);
-            ca.allowUntrusted = allowUntrusted;
+            CertifcateCordovaWebViewClient cWebClient = new CertifcateCordovaWebViewClient(this.cordova);
+            cWebClient.setAllowUntrusted(allowUntrusted);
+            webView.setWebViewClient(cWebClient);
             ca.clearCache();
             callbackContext.success();
             return true;
