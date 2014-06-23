@@ -2,12 +2,7 @@ package de.martinreinhardt.cordova.plugins;
 
 
 import android.util.Log;
-import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.DroidGap;
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.CordovaPlugin;
-import org.apache.cordova.api.PluginResult;
-import org.json.JSONArray;
+import org.apache.cordova.*;
 import org.json.JSONException;
 
 import android.content.Context;
