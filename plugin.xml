@@ -24,7 +24,7 @@ SOFTWARE.
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="org.apache.cordova.certificates"
+           id="de.martinreinhardt.cordova.plugins.certificates"
       version="0.2.0">
 
     <name>CDVCertificate</name>
