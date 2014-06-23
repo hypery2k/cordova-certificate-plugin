@@ -16,11 +16,11 @@ import android.webkit.WebView;
  * author, Martin Reinhardt on 26.05.14.
  *
  */
-public class CertifcateCordovaWebViewClient extends CordovaWebViewClient {
+public class CertificatesCordovaWebViewClient extends CordovaWebViewClient {
 
     private boolean allowUntrusted = false;
 
-    public CertifcateCordovaWebViewClient(CordovaInterface cordova) {
+    public CertificatesCordovaWebViewClient(CordovaInterface cordova) {
         super(cordova);
     }
 
