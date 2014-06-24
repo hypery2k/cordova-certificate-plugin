@@ -7,7 +7,7 @@ Cordova Plugin to configure SSL Certificates, currently used to enable usage of 
 ## install
 
 ```
-cordova plugin add https://github.com/hypery2k/cordova-certificate-plugin.git
+cordova plugin add de.martinreinhardt.cordova.plugins.certificates
 ```
 
 ## Usage
