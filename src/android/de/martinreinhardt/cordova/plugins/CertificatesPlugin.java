@@ -52,6 +52,11 @@ public class CertificatesPlugin extends CordovaPlugin {
     private static final String LOG_TAG = "Certificates";
 
     /**
+     * Untrusted Variable
+     */
+    private boolean allowUntrusted = false;
+
+    /**
      * Executes the request.
      * 
      * This method is called from the WebView thread. To do a non-trivial amount
@@ -73,17 +78,21 @@ public class CertificatesPlugin extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args,
             CallbackContext callbackContext) throws JSONException {
+
         if (action.equals("setUntrusted")) {
-            boolean allowUntrusted = args.getBoolean(0);
-            Log.d(LOG_TAG, "Setting allowUntrusted to " + allowUntrusted);
-            CordovaActivity ca = (CordovaActivity) this.cordova.getActivity();
-            CertificatesCordovaWebViewClient cWebClient = new CertificatesCordovaWebViewClient(
-                    this.cordova);
-            cWebClient.setAllowUntrusted(allowUntrusted);
-            webView.setWebViewClient(cWebClient);
-            ca.clearCache();
-            callbackContext.success();
-            return true;
+                allowUntrusted = args.getBoolean(0);
+                Log.d(LOG_TAG, "Setting allowUntrusted to " + allowUntrusted);
+                cordova.getActivity().runOnUiThread(new Runnable() {
+                        public void run() {
+                                CertificatesCordovaWebViewClient cWebClient = new CertificatesCordovaWebViewClient(cordova);
+                                cWebClient.setAllowUntrusted(allowUntrusted);
+                                webView.setWebViewClient(cWebClient);
+                                CordovaActivity ca = (CordovaActivity) cordova.getActivity();
+                                ca.clearCache();
+                        }
+                });
+                callbackContext.success();
+                return true;
         }
         callbackContext.error("Invalid Command");
         return false;
