@@ -25,12 +25,15 @@ SOFTWARE.
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
            id="de.martinreinhardt.cordova.plugins.certificates"
-      version="0.3.0">
+      version="0.4.0">
 
     <name>CDVCertificate</name>
-    <description>Cordova Certificate Plugin</description>
+    <description>
+        Cordova Certificate Plugin
+    </description>
+    <author>Martin Reinhardt</author>
     <license>MIT</license>
-    <keywords>cordova,console</keywords>
+    <keywords>cordova,certificates,ssl</keywords>
     <repo>https://github.com/hypery2k/cordova-certificate-plugin.git</repo>
     <issue>https://github.com/hypery2k/cordova-certificate-plugin/issues</issue>
 
@@ -44,7 +47,6 @@ SOFTWARE.
 
     <!-- ios -->
     <platform name="ios">
-
         <config-file target="config.xml" parent="/*">
     		<feature name="CDVCertificate">
     			<param name="ios-package" value="CDVCertificate"/>
@@ -60,7 +62,6 @@ SOFTWARE.
 
     <!-- android -->
     <platform name="android">
-
         <config-file target="res/xml/config.xml" parent="/*">            
             <feature name="CertificatesPlugin" >
                 <param name="android-package" value="de.martinreinhardt.cordova.plugins.CertificatesPlugin"/>
@@ -69,7 +70,6 @@ SOFTWARE.
 
         <source-file src="src/android/de/martinreinhardt/cordova/plugins/CertificatesCordovaWebViewClient.java" target-dir="src/de/martinreinhardt/cordova/plugins/" />
         <source-file src="src/android/de/martinreinhardt/cordova/plugins/CertificatesPlugin.java" target-dir="src/de/martinreinhardt/cordova/plugins/" />
-
     </platform>
 
 </plugin>
