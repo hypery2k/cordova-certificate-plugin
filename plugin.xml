@@ -2,7 +2,7 @@
 <!--
 The MIT License (MIT)
 
-Copyright (c) 2014 Martin Reinhardt
+Copyright (c) 2015 Martin Reinhardt
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,8 +24,8 @@ SOFTWARE.
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-           id="de.martinreinhardt.cordova.plugins.certificates"
-      version="0.4.0">
+           id="cordova-plugin-certificates"
+      version="0.5.0">
 
     <name>CDVCertificate</name>
     <description>
