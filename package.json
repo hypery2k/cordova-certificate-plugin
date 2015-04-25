@@ -1,5 +1,5 @@
 {
-  "name": "cordova-plugin-barcodescanner",
+  "name": "cordova-plugin-certificates",
   "version": "0.5.0",
   "description": "Cordova Certificate Plugin",
   "cordova": {
@@ -15,7 +15,7 @@
   },
   "keywords": [
     "cordova",
-    "battery",
+    "certificates",
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios"
