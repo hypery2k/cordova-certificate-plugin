@@ -8,4 +8,5 @@ npm install
 bower install
 grunt "ci:$PLATFORM" "$PLATFORM"
 cordova plugin add ../cordova-certificate-plugin/
-echo $cwd
+echo "Changing back to plugin directy: "$cwd
+cd $cwd
