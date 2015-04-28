@@ -6,6 +6,8 @@ script:
   - cd ..
   - git clone https://github.com/hypery2k/cordova-demo-app.git
   - cd cordova-demo-app
+  - npm install
+  - bower install
   - grunt "ci:$PLATFORM" "$PLATFORM"
   - cordova plugin add ../cordova-certificate-plugin/
 before_install:
