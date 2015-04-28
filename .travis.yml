@@ -3,13 +3,7 @@ env:
   - PLATFORM=ios
   - PLATFORM=android
 script:
-  - cd ..
-  - git clone https://github.com/hypery2k/cordova-demo-app.git
-  - cd cordova-demo-app
-  - npm install
-  - bower install
-  - grunt "ci:$PLATFORM" "$PLATFORM"
-  - cordova plugin add ../cordova-certificate-plugin/
+  - ./runIntegrationTests.sh
 before_install:
   - sudo gem install compass
   - npm install -g grunt-cli bower cordova ios-sim
