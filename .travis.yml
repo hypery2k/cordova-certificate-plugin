@@ -1,0 +1,15 @@
+language: objective-c
+env:
+  - PLATFORM=ios
+  - PLATFORM=android
+script:
+  - cd ..
+  - git clone https://github.com/hypery2k/cordova-demo-app.git
+  - cd cordova-demo-app
+  - grunt "ci:$PLATFORM" "$PLATFORM"
+  - cordova plugin add ../cordova-certificate-plugin/
+before_install:
+  - sudo gem install compass
+  - npm install --global grunt-cli bower cordova
+  - npm install
+  - bower install
