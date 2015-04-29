@@ -8,7 +8,7 @@
 ## Install
 
 ```
-cordova plugin add cordova-plugin-certificates
+cordova plugin add de.martinreinhardt.cordova.plugins.certificates
 ```
 
 ## Usage
