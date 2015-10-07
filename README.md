@@ -5,7 +5,9 @@
 > cordova Plugin to configure SSL Certificates, currently used to enable usage of untrusted  aka self-signed SSL certifcates
 
 
-## Install
+## Documentation
+
+### Install
 
 ```
 cordova plugin add cordova-plugin-certificates
@@ -17,7 +19,7 @@ cordova plugin add cordova-plugin-certificates
 cordova plugin add cordova-plugin-certificates@0.4.0
 ```
 
-## Usage
+### Usage
 
 Activate insecure certificates
 ```
