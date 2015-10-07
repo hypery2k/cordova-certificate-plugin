@@ -2,7 +2,7 @@
  
  The MIT License (MIT)
  
- Copyright (c) 2014 Martin Reinhardt
+ Copyright (c) 2015 Martin Reinhardt
  
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -27,8 +27,8 @@
  */
 package de.martinreinhardt.cordova.plugins;
 
-import org.apache.cordova.CordovaInterface;
-import org.apache.cordova.CordovaWebViewClient;
+import org.apache.cordova.engine.SystemWebViewEngine;
+import org.apache.cordova.engine.SystemWebViewClient;
 
 import android.net.http.SslError;
 import android.util.Log;
@@ -44,7 +44,7 @@ import android.webkit.WebView;
  * Copyright Martin Reinhardt 2014. All rights reserved.
  * 
  */
-public class CertificatesCordovaWebViewClient extends CordovaWebViewClient {
+public class CertificatesCordovaWebViewClient extends SystemWebViewClient {
 
     /**
      * Logging Tag
@@ -57,8 +57,8 @@ public class CertificatesCordovaWebViewClient extends CordovaWebViewClient {
      * 
      * @param cordova
      */
-    public CertificatesCordovaWebViewClient(CordovaInterface cordova) {
-        super(cordova);
+    public CertificatesCordovaWebViewClient(SystemWebViewEngine parentEngine) {
+       super(parentEngine);
     }
 
     /**

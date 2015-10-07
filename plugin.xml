@@ -38,7 +38,8 @@ SOFTWARE.
     <issue>https://github.com/hypery2k/cordova-certificate-plugin/issues</issue>
 
     <engines>
-      <engine name="cordova" version=">=3.1.0" /><!-- Needs cordova/urlutil -->
+      <engine name="cordova-android" version=">=4.1.0" />
+      <engine name="cordova-ios" version=">=3.4.0" />
     </engines>
 
     <js-module src="www/certificate.js" name="Certificates">
