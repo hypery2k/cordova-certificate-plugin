@@ -16,7 +16,7 @@ cordova plugin add cordova-plugin-certificates
 > For Cordova-Android before 4.1.0 you need to install this version
 
 ```
-cordova plugin add cordova-plugin-certificates@0.4.0
+cordova plugin add cordova-plugin-certificates@0.5.0
 ```
 
 ### Usage
