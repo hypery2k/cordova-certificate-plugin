@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-certificates",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Cordova Certificate Plugin",
   "cordova": {
     "id": "cordova-plugin-certificates",

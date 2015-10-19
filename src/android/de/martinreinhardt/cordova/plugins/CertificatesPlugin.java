@@ -83,10 +83,12 @@ public class CertificatesPlugin extends CordovaPlugin {
             CallbackContext callbackContext) throws JSONException {
 
         if (action.equals("setUntrusted")) {
+              try {
                 allowUntrusted = args.getBoolean(0);
                 Log.d(LOG_TAG, "Setting allowUntrusted to " + allowUntrusted);
                 cordova.getActivity().runOnUiThread(new Runnable() {
                         public void run() {
+                              try {
                                 CordovaActivity ca = (CordovaActivity) cordova.getActivity();
                                 SystemWebView view = (SystemWebView)webView.getView();
                                 CertificatesCordovaWebViewClient cWebClient =
@@ -95,10 +97,16 @@ public class CertificatesPlugin extends CordovaPlugin {
                                 cWebClient.setAllowUntrusted(allowUntrusted);
                                 webView.clearCache();
                                 view.setWebViewClient(cWebClient);
+                              } catch(Exception e){
+                                LOG.e(LOG_TAG, "Got unkown error during setting webview in activity", e);
+                              }
                         }
                 });
                 callbackContext.success();
                 return true;
+              } catch(Exception e){
+                LOG.e(LOG_TAG, "Got unkown error during passing to UI Thread", e);
+              }
         }
         callbackContext.error("Invalid Command");
         return false;
