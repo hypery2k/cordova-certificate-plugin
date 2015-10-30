@@ -98,7 +98,7 @@ public class CertificatesPlugin extends CordovaPlugin {
                                 webView.clearCache();
                                 view.setWebViewClient(cWebClient);
                               } catch(Exception e){
-                                Log.e(_TAG, "Got unkown error during setting webview in activity", e);
+                                Log.e(LOG_TAG, "Got unkown error during setting webview in activity", e);
                               }
                         }
                 });
