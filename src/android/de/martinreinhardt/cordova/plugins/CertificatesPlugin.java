@@ -98,14 +98,14 @@ public class CertificatesPlugin extends CordovaPlugin {
                                 webView.clearCache();
                                 view.setWebViewClient(cWebClient);
                               } catch(Exception e){
-                                LOG.e(LOG_TAG, "Got unkown error during setting webview in activity", e);
+                                Log.e(_TAG, "Got unkown error during setting webview in activity", e);
                               }
                         }
                 });
                 callbackContext.success();
                 return true;
               } catch(Exception e){
-                LOG.e(LOG_TAG, "Got unkown error during passing to UI Thread", e);
+                Log.e(LOG_TAG, "Got unkown error during passing to UI Thread", e);
               }
         }
         callbackContext.error("Invalid Command");
