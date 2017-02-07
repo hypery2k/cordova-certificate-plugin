@@ -19,7 +19,7 @@ Feel free to **donate**
 ### Install
 
 ```
-cordova plugin add cordova-plugin-certificates
+cordova plugin add de.martinreinhardt.cordova.plugins.certificates
 ```
 
 > For Cordova-Android before 4.1.0 you need to install this version
