@@ -96,6 +96,10 @@ public class CertificatesPlugin extends CordovaPlugin {
 
                                 cWebClient.setAllowUntrusted(allowUntrusted);
                                 webView.clearCache();
+
+                                // this fixes a crash that displays the error message:
+                                // "The connection to the server was unsuccessful. 
+                                webView.stopLoading();
                                 view.setWebViewClient(cWebClient);
                               } catch(Exception e){
                                 Log.e(LOG_TAG, "Got unkown error during setting webview in activity", e);
