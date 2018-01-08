@@ -1,5 +1,7 @@
 # Certificate Plugin for Apache Cordova
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hypery2k/cordova-certificate-plugin.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/hypery2k/cordova-certificate-plugin.svg?branch=master)](https://travis-ci.org/hypery2k/cordova-certificate-plugin) [![npm version](https://badge.fury.io/js/cordova-plugin-certificates.svg)](http://badge.fury.io/js/cordova-plugin-certificates)[![Bountysource](https://www.bountysource.com/badge/tracker?tracker_id=2596540)](https://www.bountysource.com/trackers/2596540-hypery2k-cordova-certificate-plugin?utm_source=2596540&utm_medium=shield&utm_campaign=TRACKER_BADGE)
 
 > cordova Plugin to configure SSL Certificates, currently used to enable usage of untrusted  aka self-signed SSL certifcates
